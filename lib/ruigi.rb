@@ -1,0 +1,7 @@
+require 'ruigi/constraints'
+require 'ruigi/document'
+require 'ruigi/error'
+require 'ruigi/model'
+require 'ruigi/parser'
+require 'ruigi/version'
+require 'ruigi/word'
