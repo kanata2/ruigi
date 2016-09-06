@@ -1,5 +1,8 @@
 # Ruigi
-Ruigi is similarity calculation library, which is implemented by Ruby.
+
+## Ruigi = Ruby + Luigi
+It is said that the name of Luigi came from __similarity__ to Mario.
+And Ruigi is __similarity__ calculation library, which is implemented by Ruby.
 
 ## Installation
 
