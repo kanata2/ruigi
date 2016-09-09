@@ -20,15 +20,12 @@ module Ruigi
       end
     end
 
-    # return Array
     def feature_vector
-      # TODO: delete next line later
-      puts "start to calculate #{title} feature_vector"
       @feature_vector ||=
         begin
-          normalized_vector = all_words.map { |word| words.keys.include?(word) ? words[word].tfidf : 0.0 }
-          norm = Math.sqrt(normalized_vector.map { |e| e ** 2 }.inject(:+))
-          normalized_vector.map do |e|
+          vector = all_words.map { |word| words.keys.include?(word) ? words[word].tfidf : 0.0 }
+          norm = Math.sqrt(vector.map { |e| e ** 2 }.inject(:+))
+          vector.map do |e|
             quot = e / norm
             quot.nan? ? 0.0 : quot
           end
