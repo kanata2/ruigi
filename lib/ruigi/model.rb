@@ -6,7 +6,7 @@ module Ruigi
       raise TypeError unless corpus.is_a?(Array)
       raise TypeError unless corpus.all? { |e| e.is_a?(Ruigi::Document) }
 
-      @corpus = corpus
+      self.corpus = corpus
 
       corpus.each do |document|
         document.model = self
