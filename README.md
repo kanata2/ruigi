@@ -1,6 +1,9 @@
 # Ruigi
 Ruigi is similarity calculation library, which is implemented by Ruby.
 
+### algorithms
+Now, only support TF-IDF and cosine similarity.
+
 ## Installation
 
 Add this line to your application's Gemfile:
