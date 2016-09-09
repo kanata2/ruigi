@@ -4,6 +4,9 @@
 It is said that the name of Luigi came from __similarity__ to Mario.
 And Ruigi is __similarity__ calculation library, which is implemented by Ruby.
 
+### algorithms
+Now, only support TF-IDF and cosine similarity.
+
 ## Installation
 
 Add this line to your application's Gemfile:
