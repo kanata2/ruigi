@@ -18,7 +18,7 @@ module Ruigi
     def tf
       raise NoDocumentError unless document
 
-      document_length = document.words.map { |k, v| v.count }.inject(:+)
+      document_length = document.words.inject(0) { |sum, (k, v)| sum + v.count }
       count.to_f / document_length
     end
 
