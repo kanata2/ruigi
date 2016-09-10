@@ -24,7 +24,7 @@ module Ruigi
       @feature_vector ||=
         begin
           vector = all_words.map { |word| words.keys.include?(word) ? words[word].tfidf : 0.0 }
-          norm = Math.sqrt(vector.map { |e| e ** 2 }.inject(:+))
+          norm = Math.sqrt(vector.inject(0) { |sum, e| sum + e ** 2 })
           vector.map do |e|
             quot = e / norm
             quot.nan? ? 0.0 : quot
