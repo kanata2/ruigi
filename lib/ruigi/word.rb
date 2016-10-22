@@ -25,15 +25,15 @@ module Ruigi
     def df
       raise NoModelError unless involved_model
 
-      # XXX: too late `Array#include?` ->  use `Array#[] != nil`
-      @df ||= involved_model.corpus.count { |document| document.words[name] != nil }
+      involved_model.corpus.count { |document| document.words[name] != nil }
     end
 
     def idf
-      @idf ||= df2idf(df)
+      df2idf(df)
     end
 
     private
+
     def df2idf(df, base = 2.0, add = 0.0)
       Math.log(involved_model.corpus.size.to_f / df, base) + add
     end
