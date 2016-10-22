@@ -28,7 +28,7 @@ Or install it yourself as:
 1. array of words -> Ruigi::Document
 ```ruby
 words = ["word1", "word2", ... , "wordN"]
-document1 = Ruigi::Document.new("title_of_document", words)
+document1 = Ruigi::Document.new(words)
 ```
 
 2. Make a Model from documents of array

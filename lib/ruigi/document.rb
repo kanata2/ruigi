@@ -2,15 +2,14 @@ module Ruigi
   class Document
     extend Forwardable
 
-    attr_accessor :model, :words, :title
+    attr_accessor :model, :words
 
     def_delegator :model, :wordlist, :all_words
 
-    def initialize(title, words)
+    def initialize(words)
       raise TypeError unless words.is_a?(Array)
       raise TypeError unless words.all? { |e| e.is_a?(String) }
 
-      self.title = title
       self.words = Hash.new
       words.group_by { |e| e }.each do |k, v|
         word = Ruigi::Word.new(k, v.length)
