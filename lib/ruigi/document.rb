@@ -8,7 +8,7 @@ module Ruigi
 
     def initialize(title, words)
       raise TypeError unless words.is_a?(Array)
-      raise TypeError unless corpus.all? { |e| e.is_a?(String) }
+      raise TypeError unless words.all? { |e| e.is_a?(String) }
 
       self.title = title
       self.words = Hash.new
