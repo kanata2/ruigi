@@ -1,7 +1,8 @@
 # Ruigi
+[![wercker status](https://app.wercker.com/status/67c3adba6bb11fcb230401bd76d4911d/s/master "wercker status")](https://app.wercker.com/project/byKey/67c3adba6bb11fcb230401bd76d4911d)
 
 ## Ruigi = Ruby + Luigi
-It is said that the name of Luigi came from __similarity__ to Mario.
+It is said that the name of Luigi came from __similarity__( it's called "ruigi" in Japanese) to Mario.
 And Ruigi is __similarity__ calculation library, which is implemented by Ruby.
 
 ### algorithms
