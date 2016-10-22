@@ -1,5 +1,3 @@
-require 'nmatrix'
-
 module Ruigi
   class Document
     extend Forwardable
@@ -10,13 +8,14 @@ module Ruigi
 
     def initialize(title, words)
       raise TypeError unless words.is_a?(Array)
+      raise TypeError unless corpus.all? { |e| e.is_a?(String) }
 
-      @title = title
-      @words = Hash.new
+      self.title = title
+      self.words = Hash.new
       words.group_by { |e| e }.each do |k, v|
         word = Ruigi::Word.new(k, v.length)
         word.document = self
-        @words[k] = word
+        self.words[k] = word
       end
     end
 

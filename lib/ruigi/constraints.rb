@@ -5,9 +5,8 @@ module Ruigi
     動詞
   ).map(&:freeze).freeze
 
-  EXCEPT_REGEXP = %w(
+  EXCEPT_REGEXP = %r(
     \\A\\p{hiragana}る\\z
     \d+
-  ).map { |pattern| Regexp.new(pattern).freeze }.freeze
-
+  ).freeze
 end
