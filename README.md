@@ -23,18 +23,18 @@ Or install it yourself as:
     $ gem install ruigi
 
 ## Usage
-1. array of words -> Ruigi::Document
+array of words -> Ruigi::Document
 ```ruby
 words = ["word1", "word2", ... , "wordN"]
 document1 = Ruigi::Document.new(words)
 ```
 
-2. Make a Model from documents of array
+Make a Model from documents of array
 ```ruby
 corpus = [document1, document2, ... , documentN] # each element's type is Ruigi::Document.
 model = Ruigi::Model.new(corpus)
 ```
-3. You can get feature vector for each document and calculate similarity between document.
+You can get feature vector for each document and calculate similarity between document.
 ```ruby
 model.feature_vector_of(0) # => return feature vector of 0th document
 ```
