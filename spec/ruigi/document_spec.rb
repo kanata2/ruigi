@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Ruigi::Document do
   context 'When made a Document Object' do
-    let(:str) { 'I have a pen but I want to another one' }
+    let(:str) { 'I have a pretty pen but I want another one' }
     let(:document) { Ruigi::Document.new(str.split) }
     let!(:model) { Ruigi::Model.new([document]) }
 
